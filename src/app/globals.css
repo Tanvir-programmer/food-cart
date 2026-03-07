@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@layer components {
+  .btn {
+    /* Layout & Sizing */
+    @apply px-8 py-3 rounded-md font-medium flex items-center justify-center;
+    
+    /* Colors (Matching your professional bronze/gold theme) */
+    @apply bg-[#b08d57] text-white shadow-sm;
+    
+    /* Transitions & Interactivity */
+    @apply transition-all duration-200 cursor-pointer;
+    @apply hover:bg-[#8e6f42] hover:shadow-md active:scale-95;
+    
+    /* Consistency */
+    @apply border-none outline-none text-center no-underline;
+  }
+}
