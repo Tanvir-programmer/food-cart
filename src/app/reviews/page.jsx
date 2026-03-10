@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Title from "../components/Title";
 import ReviewCard from "../components/cards/ReviewCard";
-
+import ReviewLoading from "../reviews/ReviewLoading";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,8 +17,7 @@ const Reviews = () => {
       .catch(() => setLoading(false));
   }, []);
 
-  if (loading)
-    return <div className="p-10 text-center">Loading reviews...</div>;
+  if (loading) return <ReviewLoading></ReviewLoading>;
 
   return (
     <div className="p-4">
