@@ -27,7 +27,7 @@ const FoodCard = ({ food }) => {
         <div className="flex flex-col gap-2 sm:flex-row">
           <div className="flex-1">
             {" "}
-            <CardButton></CardButton>
+            <CardButton food={food}></CardButton>
           </div>
 
           {/* 2. Wrap the button in a Link using food.id */}
