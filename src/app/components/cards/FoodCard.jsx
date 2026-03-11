@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link"; // 1. Import Link
+import CardButton from "../buttons/CardButton";
 
 const FoodCard = ({ food }) => {
   return (
@@ -24,9 +25,10 @@ const FoodCard = ({ food }) => {
           <p className="text-lg font-black text-orange-500">${food.price}</p>
         </div>
         <div className="flex flex-col gap-2 sm:flex-row">
-          <button className="flex-1 rounded-xl bg-orange-500 py-2.5 text-sm font-bold text-white transition-colors hover:bg-orange-600 active:scale-95">
-            Add to Cart
-          </button>
+          <div className="flex-1">
+            {" "}
+            <CardButton></CardButton>
+          </div>
 
           {/* 2. Wrap the button in a Link using food.id */}
           <Link href={`/foods/${food.id}`} className="flex-1">
