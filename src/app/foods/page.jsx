@@ -42,7 +42,6 @@ const Food = async ({ searchParams }) => {
             <div className="border-b border-2 border-amber-900 text-2xl w-60 mt-2"></div>
           </div>
 
-          {/* Client-side InputSearch */}
           <InputSearch />
         </div>
 
