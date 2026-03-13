@@ -14,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "food-cart",
-  description: "You can order any food",
+  title: {
+    default: "taxi burger",
+    template: "%s | taxi-burger"
+  }
 };
 
 export default function RootLayout({ children }) {

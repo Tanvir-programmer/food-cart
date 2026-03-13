@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Title from "./components/Title";
 
 export default function Home() {
-  return <div>Hello This is Home Page!</div>;
+  return <div>
+    <Title>Welcome to Home Page!</Title>
+  </div>;
 }

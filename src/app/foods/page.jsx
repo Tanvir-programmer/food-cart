@@ -19,7 +19,10 @@ const getFoods = async (search = "") => {
 
   return data.foods || [];
 };
-
+export const metadata = {
+  title: "food page",
+  description: "You can see all food",
+};
 // Server Component
 const Food = async ({ searchParams }) => {
   // ✅ unwrap searchParams
