@@ -1,16 +1,25 @@
 import React from "react";
 import Link from "next/link"; // 1. Import Link
 import CardButton from "../buttons/CardButton";
+import Image from "next/image";
 
 const FoodCard = ({ food }) => {
   return (
     <div className="group overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-md">
       <div className="relative aspect-video overflow-hidden">
-        <img
+        {/* <img
           src={food.foodImg}
           alt={food.title}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+        /> */}
+        <Image
+          src={food.foodImg}
+          alt={food.title}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105
+          "
+          width={300}
+          height={150}
+        ></Image>
         <div className="absolute top-3 left-3">
           <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-orange-600 backdrop-blur-sm">
             {food.category}
