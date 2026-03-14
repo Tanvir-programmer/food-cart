@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 import Title from "../components/Title";
 import ReviewCard from "../components/cards/ReviewCard";
 import ReviewLoading from "../reviews/ReviewLoading";
+import { Anek_Bangla } from "next/font/google";
+const anek = Anek_Bangla({
+  weight: "400",
+});
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -20,7 +24,7 @@ const Reviews = () => {
   if (loading) return <ReviewLoading></ReviewLoading>;
 
   return (
-    <div className="p-4">
+    <div className={anek.className}>
       <Title>
         Total <span className="text-yellow-600">{reviews.length}</span> Found
       </Title>
